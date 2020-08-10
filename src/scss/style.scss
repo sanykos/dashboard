@@ -1,11 +1,43 @@
+@import './utils/vars.scss';
+@import './utils/mixins.scss';
+@import './utils/fonts.scss';
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    font-size: $mainFont;
+    line-height: $mainLineHeight;
+    color: $mainFontColor;
+    height: 100%;
+    @media screen and (max-width: $desktopWidth) {
+        font-size: 16px;
+    }
+    @media screen and (max-width: $tableWidth) {
+        font-size: 15px;
+    }
+    @media screen and (max-width: $phoneWidth) {
+        font-size: 14px;
+    }
+}
+
+
 body {
-    background-color: #fff;
-    display: flex;
+    font-family: $mainFont;
+    font-size: $mainFontSize;
+    font-weight: $mainFontWeight;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h5 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
