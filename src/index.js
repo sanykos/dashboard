@@ -1,5 +1,5 @@
 import './js/common'
-import './scss/style.scss'
+import './assets/scss/style.scss'
 
 
 
