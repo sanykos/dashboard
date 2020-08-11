@@ -12,18 +12,57 @@
 <body>
 	<div class="container">
 		<div class="dashboard">
-			<div class="dashboard__top">
-				<div class="dashboard__title">
+			<div class="dashboard__title">
+				<div class="title-box">
 					<h1 class="title">Проекты</h1>
 				</div>
 				<nav aria-label="breadcumb">
 					<ul class="breadcrumb">
 						<li class="breadcrumb__item"><a href="#"><img src="assets/img/play-button.svg" alt=""> CRM - система</a></li>
-						<li class="breadcrumb__item active" aria-label="page"><span>/</span> Процессы</li>
+						<li class="breadcrumb__item active" aria-label="page"><span>/</span>Процессы</li>
 					</ul>
 				</nav>
 			</div>
-			
+			<div class="dashboard__tasks">
+				<div class="tasks-top-panel">
+					<div class="subtitle-box">
+						<h2 class="subtitle"><img src="assets/img/wave.svg" alt=""> Процессы проекта CRM</h2>
+					</div>
+					<div class="btn-box">
+						<a href="#" class="btn btn-add-row">Добавить столбец</a>
+					</div>
+				</div>
+				<div class="columns">
+					<div class="column" data-column-id>
+						<div class="column__top">
+							<div class="column__title">
+								<h3><img src="assets/img/pause.svg" alt=""> Беклог</h3>
+							</div>
+							<div class="column__icons">
+								<a href="#" class="btn-edit" data-action-edit><img src="assets/img/pen.svg" alt=""></a>
+								<a href="#" class="btn-trash" data-action-trash><img src="assets/img/trash.svg" alt=""></a>
+							</div>
+						</div>
+						<div class="column__notes notes" data-notes>
+							<div class="note" draggable="true" data-note-id="1">
+								<div class="note__members">
+									<div class="avatars">
+										<img src="assets/img/mem_1.jpg" alt="">
+										<img src="assets/img/mem_2.jpg" alt="">
+									</div>
+								</div>
+								<div class="note__content">
+									<p><span>#20413:</span>Интерфейс дин</p>
+								</div>
+							</div>
+						</div>
+						<div class="column__bottom">
+							<a href="#"><img src="assets/img/add.svg" alt=""></a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
     <script src="/dist/app.js"></script>
