@@ -201,6 +201,7 @@ ul {
     }
     &__notes {
         .note {
+            margin-top: rem(14);
             display: flex;
             border-radius: rem(4);
             &__members {
@@ -220,6 +221,16 @@ ul {
                 padding: rem(10);
                 width: 80%;
                 background: #F5F5F5;
+                p {
+                    span {
+                        color: #3D4044;
+                        font-weight: 400;
+                    }
+                    color: #3E65BE;
+                    font-weight: 500;
+                    font-size: rem(13);
+                    line-height: rem(18);
+                }
             }
         }
     }
