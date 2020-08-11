@@ -37,7 +37,62 @@ h1, h2, h3, h4, h5, h5 {
     margin: 0;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 a {
     text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: $desktopWidth;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 rem(15);
+}
+
+.title {
+    font-size: rem(24);
+    font-weight: 700;
+}
+
+.dashboard {
+    padding-top: rem(40);
+    &__top {
+        display: flex;
+        align-items: center;
+        .breadcrumb {
+            margin-left: rem(21);
+        }
+    }
+}
+
+.breadcrumb {
+    display: flex;
+    &__item {
+        color: #959595;
+        font-size: rem(22);
+        &.active {
+            color: $mainBlack;
+        }
+        a {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            width: 20px;
+            margin-right: rem(8);
+        }
+        span {
+            color: #959595;
+        }
+    }
 }
 
