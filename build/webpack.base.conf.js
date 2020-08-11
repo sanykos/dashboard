@@ -5,8 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 
 const PATHS = {
-    src: path.join(__dirname, './src'),
-    dist: path.join(__dirname, './dist'),
+    src: path.join(__dirname, '../src'),
+    dist: path.join(__dirname, '../dist'),
     assets: 'assets/',
 }
 
@@ -31,6 +31,13 @@ module.exports = {
 
         },
         {
+            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+            loader: 'file-loader',
+            options: {
+                name: '[name].[ext]'
+            }
+        },
+        {
             test: /\.(png|jpg|gif|svg)$/,
             loader: 'file-loader',
             options: {
@@ -53,7 +60,7 @@ module.exports = {
                     options: {
                        sourceMap: true,
                        config: {
-                           path: 'src/js/postcss.config.js'
+                           path: `${PATHS.src}/js/postcss.config.js`
                        } 
                     }
                 },
@@ -82,7 +89,7 @@ module.exports = {
                     options: {
                         sourceMap: true,
                         config: {
-                            path: 'src/js/postcss.config.js'
+                            path: `${PATHS.src}/js/postcss.config.js`
                         } 
                     }
                 }
@@ -96,7 +103,8 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` }
+                { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
+                { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` }
             ]
         }),
         new HtmlWebpackPlugin({
