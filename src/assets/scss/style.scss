@@ -204,15 +204,22 @@ ul {
             margin-top: rem(14);
             display: flex;
             border-radius: rem(4);
+            &__chevron {
+                margin-top: rem(20);
+            }
             &__members {
+                padding: rem(15) 0;
                 width: 20%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
                 background: #EFEFEF;
                 .avatars {
                     position: relative;
                     display: flex;
                     flex-direction: column;
                     img {
-                        position: absolute;
+                        // position: absolute;
                         width: 32px;
                     }
                 }
